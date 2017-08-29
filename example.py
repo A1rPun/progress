@@ -3,10 +3,9 @@ import random
 from progress.progress import Progress
 
 def sleep():
-  t = 0.3
-  time.sleep(t)
+  time.sleep(0.2)
 
 spin = Progress("")
 for i in range(20):
-  print(spin.next(), end="\r")
+  print("Progress -> {0} <-".format(spin.next()), end="\r")
   sleep()

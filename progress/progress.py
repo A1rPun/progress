@@ -26,9 +26,9 @@ loadings = [
 ]
 
 class Progress:
-  def __init__(self, str):
+  def __init__(self, loadingIndex=0):
     self.index = 0
-    self.phases = str or loadings[0]
+    self.phases = loadings[loadingIndex]
 
   def next(self):
     s = self.phases[self.index]

@@ -1,1 +1,4 @@
-__version__ = '0.0.1'
+from .progress import *
+from .spin import *
+
+__version__ = '0.1.0'

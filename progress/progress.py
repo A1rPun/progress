@@ -1,6 +1,3 @@
-import time
-# import sys
-
 loadings = [
   "|/-\\",
   "dqpb",
@@ -28,19 +25,12 @@ loadings = [
   "🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚"
 ]
 
-class Progress
-  def next():
-
-def showLoading(str, t, to):
-  str = str * t
-  while(len(str)):
-    s = str[:1]
-    str = str[1:]
-    print(s, end="\r")
-    time.sleep(to)
-
-times = 10 # int(sys.argv[1]) or 1
-mode = 16 # int(sys.argv[2]) or 0
-timeout = 0.1
-
-showLoading(loadings[mode], times, timeout)
+class Progress:
+  def __init__(self, str):
+    self.index = 0
+    self.phases = str || loadings[0]
+  
+  def next(self):
+    s = self.phases[self.index]
+    self.index = (self.index + 1) % len(self.phases)
+	return s

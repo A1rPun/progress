@@ -1,11 +1,14 @@
 import time
 from progress import Progress, Spin
 
-PROGRESS = "Progress -> {0} <-"
+PROGRESS = " -> {0} <- {1}s"
+start = time.time()
 
 for key in Spin.keys():
   spin = Progress(Spin[key])
   for i in range(20):
-    print(PROGRESS.format(spin.next()), end="\r")
+    t = round(time.time() - start)
+    print(PROGRESS.format(spin.next(), t), end="\r")
     time.sleep(0.1)
-  print(PROGRESS.format(spin.next()))
+  print(PROGRESS.format(spin.next(), t))
+

@@ -14,7 +14,7 @@ print(spin.next()) # -> 2
 ```python
 from progress import Progress, Spin
 
-spin = Progress(Spin.a)
+spin = Progress(Spin.pipe)
 # print on the same line with \r
 print(spin.next(), end="\r") # -> |
 ```

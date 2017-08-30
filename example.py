@@ -1,13 +1,11 @@
 import time
-import random
 from progress import Progress, Spin
 
-def sleep():
-  time.sleep(0.1)
+PROGRESS = "Progress -> {0} <-"
 
-for j in range(len(Spin.phases)):
-  spin = Progress(Spin.phases[j])
+for key in Spin.keys():
+  spin = Progress(Spin[key])
   for i in range(20):
-    print("Progress -> {0} <-".format(spin.next()), end="\r")
-    sleep()
-  print("Progress -> {0} <-".format(spin.next()))
+    print(PROGRESS.format(spin.next()), end="\r")
+    time.sleep(0.1)
+  print(PROGRESS.format(spin.next()))

@@ -1,7 +1,7 @@
 # progress
 
 Simple progress indicator module written in python
-[![asciicast](https://asciinema.org/a/0UwAnrQrjyr0h1Rf4rNg57U9M.png)](https://asciinema.org/a/0UwAnrQrjyr0h1Rf4rNg57U9M)
+[![asciicast](https://asciinema.org/a/ePEurSIHUzw2WSpXoaysTSTzv.png)](https://asciinema.org/a/ePEurSIHUzw2WSpXoaysTSTzv)
 
 ## Usage
 
@@ -30,7 +30,7 @@ print(spin.next()) # -> :|
 ```python
 from progress import Progress, Spin
 
-spin = Progress(Spin.pipe)
+spin = Progress(Spin["pipe"])
 print(spin.next()) # -> |
 print(spin.next()) # -> /
 print(spin.next()) # -> -

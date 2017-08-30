@@ -1,5 +1,8 @@
 # progress
 
+Simple progress indicator module written in python
+[![asciicast](https://asciinema.org/a/0UwAnrQrjyr0h1Rf4rNg57U9M.png)](https://asciinema.org/a/0UwAnrQrjyr0h1Rf4rNg57U9M)
+
 ## Usage
 
 ### Import the module

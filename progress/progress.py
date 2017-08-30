@@ -3,7 +3,7 @@ from .spin import Spin
 class Progress(object):
   def __init__(self, phases=""):
     self.index = 0
-    self.phases = phases or Spin.phases[0]
+    self.phases = phases or Spin.pipe
 
   def next(self):
     s = self.phases[self.index]

@@ -1,20 +1,41 @@
 # progress
 
-## Basics
+## Usage
+
+### Import the module
 ```python
 from progress import Progress
+```
 
+### Single string
+```python
 spin = Progress("0123456789")
 print(spin.next()) # -> 0
 print(spin.next()) # -> 1
 print(spin.next()) # -> 2
 ```
 
-## Spin
+### Array of strings
+```python
+spin = Progress([":|", ":P"])
+print(spin.next()) # -> :|
+print(spin.next()) # -> :P
+print(spin.next()) # -> :|
+```
+
+## Pre-defined Spinners
 ```python
 from progress import Progress, Spin
 
 spin = Progress(Spin.pipe)
-# print on the same line with \r
-print(spin.next(), end="\r") # -> |
+print(spin.next()) # -> |
+print(spin.next()) # -> /
+print(spin.next()) # -> -
 ```
+
+## Print on the same line
+```python
+def printSameLine(msg):
+  print(msg, end="\r")
+```
+
